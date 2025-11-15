@@ -213,6 +213,9 @@ main {
   align-items: center;
 }
 
+.btn:hover {
+}
+
 .btn div {
   display: inline-flex;
   align-items: center;
