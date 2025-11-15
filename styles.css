@@ -1,0 +1,125 @@
+:root {
+  /* colors */
+  --color-grey-950: hsl(255, 22%, 4%);
+  --color-grey-900: hsl(248, 17%, 9%);
+  --color-grey-850: hsl(248, 15%, 11%);
+  --color-grey-800: hsl(248, 10%, 15%);
+  --color-grey-700: hsl(248, 5%, 34%);
+  --color-grey-600: hsl(251, 9%, 53%);
+  --color-grey-200: hsl(252, 11%, 91%);
+  --color-green-200: hsl(127, 100%, 82%);
+  --color-yellow-200: hsl(42, 91%, 68%);
+  --color-orange-400: hsl(13, 95%, 66%);
+  --color-red-500: hsl(0, 91%, 63%);
+  --gradient-1: linear-gradient(
+    90deg,
+    rgba(20, 19, 27, 1) 0%,
+    rgba(8, 7, 11, 1) 50%
+  );
+  /* typography */
+  --font-family-primary: "JetBrains Mono", monospace;
+  --text-spacing-primary: 0px;
+  --font-size-32: 2rem;
+  --font-size-24: 1.5rem;
+  --font-size-18: 1.125rem;
+  --font-size-16: 1rem;
+
+  --line-height-1: 1.3125;
+  --line-height-2: 1.3333;
+  --line-height-4: 1.25;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-18);
+  letter-spacing: var(--text-spacing-primary);
+  /* 4. Add accessible line-height */
+  line-height: var(--line-height-2);
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* utilities */
+
+.grid-container {
+  display: grid;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.text-preset-1 {
+  font-size: var(--font-size-32);
+  line-height: var(--line-height-1);
+}
+
+.text-preset-2 {
+  font-size: var(--font-size-24);
+  line-height: var(--line-height-2);
+}
+.text-preset-4 {
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-4);
+}
