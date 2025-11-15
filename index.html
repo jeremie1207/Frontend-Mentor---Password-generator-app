@@ -1,29 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Password generator app</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  Password Generator
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
 
-  P4$5W0rD!
+    <link rel="stylesheet" href="./styles.css" />
 
-  Character Length
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h2 class="password_generator__title">Password Generator</h2>
+        <section class="password__container">
+          <input
+            type="text"
+            name="password"
+            id="password"
+            placeholder="P4$5W0rD!"
+            readonly
+          />
+          <img src="./assets/images/icon-copy.svg" alt="copy" /><br />
+        </section>
 
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
+        <section class="password__attributes">
+          <input
+            class="password__size"
+            type="range"
+            name="character_length"
+            id="character_length"
+            min="1"
+            max="20"
+          />
 
-  Strength
-
-  Generate
-
-</body>
+          <section class="password__contains">
+            <input type="checkbox" name="uppercase" id="uppercase" />
+            <label for="uppercase">Include Uppercase Letters</label><br />
+            <input type="checkbox" name="lowercase" id="lowercase" />
+            <label for="lowercase">Include Lowercase Letters</label><br />
+            <input type="checkbox" name="numbers" id="numbers" />
+            <label for="numbers">Includes Numbers</label><br />
+            <input type="checkbox" name="symbols" id="symbols" />
+            <label for="symbols">Includes Symbols</label><br />
+          </section>
+          <section class="password__strength">
+            <h3>Strength</h3>
+            <div class="password_strength__level">
+              <p class="password_strength__level_name">Medium</p>
+              <section class="password_strength__level_representation">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </section>
+            </div>
+          </section>
+          <button>Generate</button>
+        </section>
+      </article>
+    </main>
+    <script src="./script.js"></script>
+  </body>
 </html>
