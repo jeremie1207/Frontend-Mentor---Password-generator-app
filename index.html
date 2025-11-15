@@ -24,10 +24,12 @@
   </head>
   <body>
     <main>
-      <article>
+      <article class="password_generator_card">
         <h2 class="password_generator__title">Password Generator</h2>
-        <section class="password__container">
+
+        <section class="password__container bg-grey-800">
           <input
+            class="full-inline-size"
             type="text"
             name="password"
             id="password"
@@ -37,13 +39,17 @@
           <img src="./assets/images/icon-copy.svg" alt="copy" /><br />
         </section>
 
-        <section class="password__attributes">
+        <section class="password__attributes bg-grey-800">
+          <div class="flex-container justify-content-space-between">
+            <p>Character Length</p>
+            <p>0</p>
+          </div>
           <input
-            class="password__size"
+            class="password__size full-inline-size"
             type="range"
             name="character_length"
             id="character_length"
-            min="1"
+            min="0"
             max="20"
           />
 
@@ -69,8 +75,8 @@
               </section>
             </div>
           </section>
-          <button>
-            <div>
+          <button class="btn full-inline-size">
+            <div class="">
               Generate
               <img
                 src="./assets/images/icon-arrow-right.svg"
